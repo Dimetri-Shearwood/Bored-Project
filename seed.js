@@ -1,5 +1,4 @@
-require("./database");
-require('./connection')
+require('./connection');
 let mongoose = require("mongoose");
 const Bored = require("./Bored");
 let websiteData = require("./data.json");

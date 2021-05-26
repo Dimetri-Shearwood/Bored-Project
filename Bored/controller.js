@@ -8,7 +8,6 @@ let controller = {
         let bored = request.body
         Bored
             .create(bored)
-            .then(bored=> bored.json())
             .then(responseData=> response.json(responseData))
     },
     readById(request, response){

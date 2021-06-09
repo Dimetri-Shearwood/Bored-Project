@@ -9,6 +9,6 @@ router.all('*', function (req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
 });
-router.use('/bored', boredRouter)
+router.use('/', boredRouter)
 
 module.exports = router

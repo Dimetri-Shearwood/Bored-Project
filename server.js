@@ -8,10 +8,12 @@ app.use(function (req, res, next) { // Website you wish to allow to connect
     // res.header('Access-Control-Allow-Credentials', true); // Pass to next layer of middleware 
     next(); 
 });
-app.set("port", process.env.PORT || 9000);
+const PORT = 8080;
+
+app.set("port", process.env.PORT || PORT);
 let server = app.listen(app.get("port"))
 
-server.on('listening', ()=> console.log("Server is listening"))
+server.on('listening', ()=> console.log(`Server is listening ${PORT}`))
 server.on('error', error=> console.error("Server is sad", error))
 
 module.exports = server

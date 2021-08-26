@@ -12,6 +12,9 @@ let controller = {
     },
     readById(request, response){
         let id = request.params.id
+        console.log("Hit Me")
+        console.log(request.params)
+
         bored
             .find({})
             .then(boreds=> response.json(boreds))
